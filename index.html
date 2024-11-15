@@ -3,64 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your Name - Data Science and AI Portfolio">
+    <meta name="description" content="Aman Mishra - Data Science and AI Portfolio">
     <title>Aman Mishra - Data Scientist Portfolio</title>
+
+    <!-- Link to Google Fonts (Poppins for a clean, modern look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Link to Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Link to Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to your Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Aman Mishra</h1>
-        <p>Data Scientist | AI & Machine Learning Enthusiast</p>
+
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-3">Aman Mishra</h1>
+        <p class="lead">Data Scientist | AI & Machine Learning Enthusiast</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Aman's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm <strong>Aman Mishra</strong>, a passionate Data Scientist specializing in AI, Machine Learning, and Data Analysis. I love building solutions using data to solve complex problems.</p>
+    <!-- About Section -->
+    <section id="about" class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>Hi! I'm <strong>Aman Mishra</strong>, a passionate Data Scientist specializing in AI, Machine Learning, and Data Analysis. I love building solutions using data to solve complex problems.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/your-photo.jpg" alt="Aman Mishra" class="img-fluid rounded-circle" />
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python, R, SQL</li>
-            <li>Machine Learning: Scikit-learn</li>
-            <li>Data Visualization: Matplotlib, Seaborn, Plotly</li>
-            <li>Deep Learning: PyTorch, TensorFlow</li>
+    <!-- Skills Section -->
+    <section id="skills" class="container py-5">
+        <h2 class="text-center mb-4">Skills</h2>
+        <ul class="list-unstyled">
+            <li><i class="fas fa-check-circle"></i> Python, R, SQL</li>
+            <li><i class="fas fa-check-circle"></i> Machine Learning: Scikit-learn</li>
+            <li><i class="fas fa-check-circle"></i> Data Visualization: Matplotlib, Seaborn, Plotly</li>
+            <li><i class="fas fa-check-circle"></i> Deep Learning: PyTorch, TensorFlow</li>
         </ul>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>House Price Prediction</h3>
-            <p>A regression model to predict house prices based on multiple features. Techniques include linear regression, feature engineering, and model optimization.</p>
-            <a href="https://github.com/yourusername/house-price-prediction">View on GitHub</a>
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Projects</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card shadow-sm mb-4">
+                        <img src="assets/house-price-prediction.jpg" class="card-img-top" alt="House Price Prediction">
+                        <div class="card-body">
+                            <h5 class="card-title">House Price Prediction</h5>
+                            <p class="card-text">A regression model to predict house prices based on multiple features. Techniques include linear regression, feature engineering, and model optimization.</p>
+                            <a href="https://github.com/yourusername/house-price-prediction" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card shadow-sm mb-4">
+                        <img src="assets/cnn-image.png" class="card-img-top" alt="Image Classification with CNN">
+                        <div class="card-body">
+                            <h5 class="card-title">Image Classification with CNN</h5>
+                            <p class="card-text">Developed a Convolutional Neural Network (CNN) to classify images of dogs and cats using deep learning techniques.</p>
+                            <a href="https://github.com/yourusername/cnn-image-classification" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project">
-            <h3>Image Classification with CNN</h3>
-            <p>Developed a Convolutional Neural Network (CNN) to classify images of dogs and cats.</p>
-            <img src="assets/cnn-image.png" alt="Image Classification Example" style="width:100%; max-width:600px;">
-            <a href="https://github.com/yourusername/cnn-image-classification">View on GitHub</a>
-        </div>        
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+        <h2 class="text-center mb-4">Contact Me</h2>
         <p>Email: <a href="mailto:aman.mishra.23@outlook.com">aman.mishra.23@outlook.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/aman---mishra/">linkedin.com/in/aman_mishra</a></p>
-        <p>GitHub: <a href="https://github.com/questinrest">github.com/aman_mishra</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/aman---mishra/" target="_blank">linkedin.com/in/aman_mishra</a></p>
+        <p>GitHub: <a href="https://github.com/questinrest" target="_blank">github.com/aman_mishra</a></p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Aman Mishra</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Aman Mishra | All Rights Reserved</p>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
