@@ -1,163 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aman Mishra - Data Science and AI Portfolio">
-    <title>Aman Mishra - Data Scientist Portfolio</title>
-
-    <!-- Link to Google Fonts (Poppins for a clean, modern look) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Link to Font Awesome for Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- Link to Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Link to your Custom Styles -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header class="bg-primary text-white text-center py-5">
-        <h1 class="display-3">Aman Mishra</h1>
-        <p class="lead">Data Scientist | AI & Machine Learning Enthusiast</p>
-    </header>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Aman's Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about" class="container py-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>About Me</h2>
-                <p>Hi! I'm <strong>Aman Mishra</strong>, currently a final year student of Data Science at Defence Institute of Advanced Technology, Pune. I have a mathematics background in my undergraduate studies and am currently working in the field of Machine Unlearning. I am an aspiring Data Scientist with expertise in Machine Learning, Deep Learning, Data Structures, Algorithms, and Database Management. Apart from my academic work, I am also involved in personal projects and contributing to AI projects with a focus on community-driven solutions.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="assets/your-photo.jpg" alt="Aman Mishra" class="img-fluid rounded-circle" />
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="container py-5">
-        <h2 class="text-center mb-4">Skills</h2>
-        <ul class="list-unstyled">
-            <li><i class="fas fa-check-circle"></i> Python, R, SQL</li>
-            <li><i class="fas fa-check-circle"></i> Machine Learning: Scikit-learn</li>
-            <li><i class="fas fa-check-circle"></i> Data Visualization: Matplotlib, Seaborn, Plotly</li>
-            <li><i class="fas fa-check-circle"></i> Deep Learning: PyTorch, TensorFlow</li>
-        </ul>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Projects</h2>
-            <div class="row">
-
-                <!-- Gesture Recognition Project -->
-                <div class="col-md-6">
-                    <div class="card shadow-sm mb-4">
-                        <img src="assets/gesture-recognition.jpg" class="card-img-top" alt="Gesture Recognition">
-                        <div class="card-body">
-                            <h5 class="card-title">Gesture Recognition using Sequential Images</h5>
-                            <p class="card-text">Developed a hybrid CNN-LSTM model for gesture classification using sequential images from a Kaggle dataset. Implemented transfer learning with MobileNet and ResNet50v2 to improve model accuracy.</p>
-                            <a href="https://github.com/yourusername/gesture-recognition" class="btn btn-primary">View on GitHub</a>
-                        </div>
+<!-- Skills Section -->
+<section id="skills" class="container py-5">
+    <h2 class="text-center mb-4">Skills</h2>
+    <div class="row">
+        <!-- Skill 1: Python -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fab fa-python fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Python</h5>
+                    <p class="card-text">Proficient in Python for Data Science, Machine Learning, and AI applications.</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
                     </div>
                 </div>
-
-                <!-- Ship Detection Project -->
-                <div class="col-md-6">
-                    <div class="card shadow-sm mb-4">
-                        <img src="assets/ship-detection.jpg" class="card-img-top" alt="Ship Detection">
-                        <div class="card-body">
-                            <h5 class="card-title">Ship Detection using Satellite Imagery</h5>
-                            <p class="card-text">Created a deep learning model using the U-Net architecture to detect ships in satellite images. Achieved high accuracy through data augmentation and hyperparameter tuning.</p>
-                            <a href="https://github.com/yourusername/ship-detection" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Image Compression Project -->
-                <div class="col-md-6">
-                    <div class="card shadow-sm mb-4">
-                        <img src="assets/image-compression.jpg" class="card-img-top" alt="Image Compression">
-                        <div class="card-body">
-                            <h5 class="card-title">Image Compression using K-Means and Fuzzy C-Means Clustering</h5>
-                            <p class="card-text">Implemented image compression techniques using K-Means and Fuzzy C-Means clustering to reduce the size of images while preserving quality. Improved compression efficiency and reduced data storage requirements.</p>
-                            <a href="https://github.com/yourusername/image-compression" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container py-5">
-        <h2 class="text-center mb-4">Contact Me</h2>
-        <div class="row justify-content-center">
-            <!-- Email -->
-            <div class="col-md-4 text-center mb-3">
-                <a href="mailto:aman.mishra.23@outlook.com" class="d-flex align-items-center justify-content-center">
-                    <i class="fas fa-envelope fa-2x me-2"></i>
-                    <span>Email: aman.mishra.23@outlook.com</span>
-                </a>
-            </div>
-
-            <!-- LinkedIn -->
-            <div class="col-md-4 text-center mb-3">
-                <a href="https://www.linkedin.com/in/aman---mishra/" target="_blank" class="d-flex align-items-center justify-content-center">
-                    <i class="fab fa-linkedin fa-2x me-2"></i>
-                    <span>LinkedIn: aman_mishra</span>
-                </a>
-            </div>
-
-            <!-- GitHub -->
-            <div class="col-md-4 text-center mb-3">
-                <a href="https://github.com/questinrest" target="_blank" class="d-flex align-items-center justify-content-center">
-                    <i class="fab fa-github fa-2x me-2"></i>
-                    <span>GitHub: aman_mishra</span>
-                </a>
+        <!-- Skill 2: R -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fab fa-r-project fa-3x text-success mb-3"></i>
+                    <h5 class="card-title">R</h5>
+                    <p class="card-text">Skilled in R for statistical analysis, data visualization, and predictive modeling.</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2024 Aman Mishra | All Rights Reserved</p>
-    </footer>
+        <!-- Skill 3: SQL -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-database fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title">SQL</h5>
+                    <p class="card-text">Experienced in SQL for database management, queries, and data extraction.</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <!-- Skill 4: Machine Learning -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-brain fa-3x text-info mb-3"></i>
+                    <h5 class="card-title">Machine Learning</h5>
+                    <p class="card-text">Experienced with machine learning algorithms, including supervised and unsupervised models.</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 85%;" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skill 5: Data Visualization -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-chart-bar fa-3x text-danger mb-3"></i>
+                    <h5 class="card-title">Data Visualization</h5>
+                    <p class="card-text">Proficient in creating engaging and informative visualizations using Matplotlib, Seaborn, and Plotly.</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skill 6: Deep Learning -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fab fa-python fa-3x text-info mb-3"></i>
+                    <h5 class="card-title">Deep Learning</h5>
+                    <p class="card-text">Hands-on experience with deep learning frameworks like TensorFlow and PyTorch.</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
