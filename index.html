@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAN_MISHRA // NEUROFUNK_NODE</title>
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #0a0a0a;
+            --text-primary: #EAEAEA;
+            --text-dim: #888;
+            --accent: #CCFF00; /* Acid Green */
+            --accent-dim: rgba(204, 255, 0, 0.1);
+            --alert: #FF003C;
+            --grid-line: #222;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* CRT SCANLINE EFFECT */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 2px;
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            background-color: var(--accent);
+            color: var(--bg);
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        /* LAYOUT UTILS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+        }
+
+        .col-span-12 { grid-column: span 12; }
+        .col-span-8 { grid-column: span 8; }
+        .col-span-4 { grid-column: span 4; }
+        .col-span-6 { grid-column: span 6; }
+
+        @media (max-width: 900px) {
+            .col-span-8, .col-span-4, .col-span-6 { grid-column: span 12; }
+        }
+
+        /* COMPONENTS */
+        .panel {
+            border: 1px solid #333;
+            background: var(--bg);
+            padding: 20px;
+            position: relative;
+            box-shadow: 4px 4px 0px #111;
+        }
+
+        .panel:hover {
+            border-color: var(--accent);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            color: var(--text-dim);
+        }
+
+        .panel-header strong {
+            color: var(--accent);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            border: 1px solid #444;
+            padding: 2px 6px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+            color: #aaa;
+            background: #0a0a0a;
+        }
+
+        /* HERO BLOCK */
+        .hero-status {
+            display: flex;
+            gap: 20px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            padding: 10px;
+            background: #080808;
+        }
+        
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            box-shadow: 0 0 5px var(--accent);
+        }
+
+        /* EXPERIENCE LIST */
+        .exp-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            border-left: 1px solid #333;
+        }
+
+        .exp-item::before {
+            content: "";
+            position: absolute;
+            left: -3px;
+            top: 0;
+            width: 5px;
+            height: 5px;
+            background: var(--accent);
+        }
+
+        .date {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* NEWSLETTER BOX */
+        .newsletter-box {
+            border: 1px solid var(--accent);
+            background: var(--accent-dim);
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .glitch-text {
+            position: relative;
+        }
+
+        .glitch-text::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .ascii-art {
+            font-size: 10px;
+            line-height: 10px;
+            color: #333;
+            white-space: pre;
+            overflow: hidden;
+            margin-bottom: 20px;
+            user-select: none;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .stat-item {
+            background: #111;
+            padding: 10px;
+            border: 1px solid #222;
+        }
+        
+        .stat-label { font-size: 0.7rem; color: #666; display: block;}
+        .stat-val { font-size: 0.9rem; color: var(--accent); }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER / IDENTITY -->
+    <header class="col-span-12">
+        <div class="hero-status">
+            <span><span class="status-dot"></span>SYSTEM_ONLINE</span>
+            <span>LOC: DELAWARE/PUNE</span>
+            <span>ROLE: AI_ENGINEER</span>
+            <span style="color: var(--alert)">WARN: HIGH_LATENCY_LEGACY_SYSTEMS</span>
+        </div>
+        
+        <div class="panel" style="border-top: 4px solid var(--accent);">
+            <div class="ascii-art">
+   __ _ _ __ ___   __ _ _ __  
+  / _` | '_ ` _ \ / _` | '_ \ 
+ | (_| | | | | | | (_| | | | |
+  \__,_|_| |_| |_|\__,_|_| |_|  MISHRA.sys
+            </div>
+            <h1>AMAN MISHRA</h1>
+            <p style="max-width: 600px; margin-bottom: 20px; font-size: 1.1rem;">
+                > BUILDING AGENTIC SYSTEMS @ OBSERVO TECH STUDIO<br>
+                > MATH + CODE // ENGINEERING FIRST<br>
+                > EX-CONFEDO AI | EX-USG LAB IIITD
+            </p>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://linkedin.com/in/aman-mishra">LINKEDIN_NODE</a>
+                <a href="https://github.com/questinrest">GITHUB_REPO</a>
+                <a href="mailto:am30435@gmail.com">MAIL_PROTOCOL</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- LEFT COLUMN: WORK HISTORY -->
+    <div class="col-span-8">
+        <div class="panel" style="height: 100%;">
+            <div class="panel-header">
+                <span>/// EXECUTION_LOG: EXPERIENCE</span>
+                <strong>[RWX]</strong>
+            </div>
+
+            <div class="exp-item">
+                <span class="date">AUG 2025 - PRESENT // DELAWARE (REMOTE)</span>
+                <h2>OBSERVO TECH STUDIO</h2>
+                <p style="color: #999; margin-bottom: 8px;">Founding Team Intern (Engineering)</p>
+                <p>
+                    > Architected backend microservices using <span style="color:white">FastAPI</span> & JWT auth.<br>
+                    > Engineered serverless workflows via <span style="color:white">Azure Function Apps</span> & Logic Apps.<br>
+                    > Integrated Azure Blob Storage/Key Vault for secure, scalable data I/O.
+                </p>
+            </div>
+
+            <div class="exp-item">
+                <span class="date">APR 2025 - JUL 2025 // PUNE (REMOTE)</span>
+                <h2>CONFEDO AI</h2>
+                <p style="color: #999; margin-bottom: 8px;">GenAI Intern (R&D)</p>
+                <p>
+                    > Analyzed LLM observability stacks: LangSmith, RAGAS, DeepEval.<br>
+                    > Built agentic prototypes using <span style="color:white">LangGraph & n8n</span>.<br>
+                    > Defined architecture for reliable production AI service operationalization.
+                </p>
+            </div>
+
+            <div class="exp-item">
+                <span class="date">JAN 2025 - JUN 2025 // NEW DELHI</span>
+                <h2>USG LAB @ IIIT DELHI</h2>
+                <p style="color: #999; margin-bottom: 8px;">Research Intern (Master's Thesis)</p>
+                <p>
+                    > Executed <strong>Machine Unlearning</strong> via contrastive model inversion.<br>
+                    > Achieved 90%+ efficacy across 8 classes; reduced retraining time by ~77%.<br>
+                    > Investigated coreset strategies and outlier detection for vision tasks.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN: STATS & SKILLS -->
+    <div class="col-span-4">
+        
+        <!-- WRITING MODULE -->
+        <div class="panel newsletter-box">
+            <div class="panel-header" style="border-color: var(--accent); color: var(--accent);">
+                <span>/// DATA_STREAM: INSIGHT</span>
+                <strong>[LIVE]</strong>
+            </div>
+            <h3>LINKEDIN NEWSLETTER</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 15px;">
+                Clear and practical takes. No hype. Just engineering reality.
+            </p>
+            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7365791507200577536" style="width: 100%; display: block; text-align: center; background: var(--bg); color: var(--accent); border: 1px solid var(--accent); padding: 5px;">ESTABLISH_LINK</a>
+        </div>
+
+        <!-- SKILLS MODULE -->
+        <div class="panel" style="margin-top: 20px;">
+            <div class="panel-header">
+                <span>/// INSTALLED_MODULES</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <h3>LANGUAGES</h3>
+                <div>
+                    <span class="tag">PYTHON</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">R</span>
+                </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <h3>STACK</h3>
+                <div>
+                    <span class="tag">PYTORCH</span>
+                    <span class="tag">FASTAPI</span>
+                    <span class="tag">DOCKER</span>
+                    <span class="tag">AZURE</span>
+                    <span class="tag">LANGCHAIN</span>
+                    <span class="tag">HUGGING_FACE</span>
+                </div>
+            </div>
+            <div>
+                <h3>DB</h3>
+                <div>
+                    <span class="tag">MONGODB</span>
+                    <span class="tag">CHROMA</span>
+                    <span class="tag">MYSQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION MODULE -->
+        <div class="panel" style="margin-top: 20px;">
+            <div class="panel-header">
+                <span>/// ACADEMIC_KERNELS</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="date">2023 - 2025</span>
+                <h3 style="margin-bottom: 0;">MSc DATA SCIENCE</h3>
+                <span style="font-size: 0.75rem; color: #888;">DIAT, Pune</span>
+            </div>
+            <div>
+                <span class="date">2018 - 2021</span>
+                <h3 style="margin-bottom: 0;">BSc MATHEMATICS</h3>
+                <span style="font-size: 0.75rem; color: #888;">IGNOU</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FULL WIDTH PROJECTS -->
+    <div class="col-span-12">
+        <div class="panel">
+            <div class="panel-header">
+                <span>/// COMPILED_ARTIFACTS (PROJECTS)</span>
+                <strong>./list_all</strong>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                
+                <!-- PROJECT 1 -->
+                <div style="background: #080808; padding: 15px; border: 1px solid #222;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3>LLMOps PIPELINE</h3>
+                        <span style="color: var(--accent); font-size: 0.7rem;">v1.0.0</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 15px;">
+                        Automated CI/CD for LLM APIs using GitHub Actions. Handles testing, evaluation, deployment, and rollback mechanisms.
+                    </p>
+                    <div>
+                        <span class="tag">GITHUB ACTIONS</span>
+                        <span class="tag">DOCKER</span>
+                        <span class="tag">FASTAPI</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div style="background: #080808; padding: 15px; border: 1px solid #222;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3>VOICE AGENT + TOOLS</h3>
+                        <span style="color: var(--accent); font-size: 0.7rem;">v0.9.beta</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 15px;">
+                        Real-time voice agent triggering tool-based actions (flight search/booking). Multi-modal integration with LoRA adapters.
+                    </p>
+                    <div>
+                        <span class="tag">LoRA</span>
+                        <span class="tag">LANGCHAIN</span>
+                        <span class="tag">PEFT</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 (Placeholder based on vibe) -->
+                <div style="background: #080808; padding: 15px; border: 1px solid #222; opacity: 0.5;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3>OBSERVABILITY_STACK</h3>
+                        <span style="color: var(--alert); font-size: 0.7rem;">[PENDING]</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 15px;">
+                        Research into RAGAS and DeepEval for automated metric tracking in production environments.
+                    </p>
+                    <div>
+                        <span class="tag">RAGAS</span>
+                        <span class="tag">DEEPEVAL</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="col-span-12" style="text-align: center; padding-top: 40px; color: #444; font-size: 0.7rem;">
+        <p>
+            SYSTEM_EOF // NEUROFUNK_LABS_INSPIRED<br>
+            <span class="glitch-text">WAITING_FOR_INPUT</span>
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>
