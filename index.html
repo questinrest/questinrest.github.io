@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aman's Portfolio</title>
+    <title>Aman's Portfolio 2025 December</title>
     <style>
         :root {
             --bg: #080808;
@@ -59,7 +59,7 @@
 
         a:hover {
             background-color: var(--accent);
-            color: #000;
+            color: #000 !important; /* Enforce black text on hover globally */
             box-shadow: 0 0 10px var(--accent);
         }
         
@@ -70,9 +70,29 @@
         }
         
         .link-accent:hover {
-            color: #000 !important; /* Forces black text on hover */
+            color: #000 !important;
             background-color: var(--accent);
             box-shadow: 0 0 10px var(--accent);
+        }
+
+        /* FIX: Dedicated button class for newsletter to fix readability */
+        .newsletter-btn {
+            width: 100%; 
+            display: block; 
+            text-align: center; 
+            background: var(--bg); 
+            color: var(--accent); 
+            border: 1px solid var(--accent); 
+            padding: 8px; 
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--accent);
+            color: #000 !important; /* Force black text on hover */
+            box-shadow: 0 0 15px var(--accent);
+            cursor: pointer;
         }
 
         .container {
@@ -339,7 +359,7 @@
             <p style="font-size: 0.9rem; margin-bottom: 15px; color: #ddd;">
                 Clear and practical takes. No hype. Just engineering reality.
             </p>
-            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7365791507200577536" style="width: 100%; display: block; text-align: center; background: var(--bg); color: var(--accent); border: 1px solid var(--accent); padding: 8px; font-weight: bold;">ESTABLISH_LINK</a>
+            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7365791507200577536" class="newsletter-btn">ESTABLISH_LINK</a>
         </div>
 
         <!-- SKILLS MODULE -->
@@ -400,7 +420,6 @@
         <div class="panel">
             <div class="panel-header">
                 <span>/// COMPILED_ARTIFACTS (PROJECTS)</span>
-                <!-- APPLIED FIX: Using .link-accent class instead of inline styles -->
                 <a href="https://github.com/questinrest?tab=repositories" target="_blank" class="link-accent" style="border-bottom: 1px dashed var(--accent);">[VIEW_FULL_ARCHIVE] -></a>
             </div>
             
@@ -409,7 +428,7 @@
                 <!-- PROJECT 1 -->
                 <div style="background: #111; padding: 20px; border: 1px solid #333;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-                        <h3><a href="https://github.com/questinrest" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">LLMOps PIPELINE</a></h3>
+                        <h3><a href="https://github.com/questinrest" target="_blank">LLMOps PIPELINE</a></h3>
                         <span style="color: var(--accent); font-size: 0.7rem;">v1.0.0</span>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
@@ -425,7 +444,7 @@
                 <!-- PROJECT 2 -->
                 <div style="background: #111; padding: 20px; border: 1px solid #333;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-                        <h3><a href="https://github.com/questinrest" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">VOICE AGENT + TOOLS</a></h3>
+                        <h3><a href="https://github.com/questinrest" target="_blank">VOICE AGENT + TOOLS</a></h3>
                         <span style="color: var(--accent); font-size: 0.7rem;">v0.9.beta</span>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
@@ -441,8 +460,7 @@
                 <!-- PROJECT 3: DEEP ML SOLUTIONS -->
                 <div style="background: #111; padding: 20px; border: 1px solid #333;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-                        <h3><a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">DEEP ML SOLUTIONS</a></h3>
-                        <!-- APPLIED FIX: Using .link-accent -->
+                        <h3><a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank">DEEP ML SOLUTIONS</a></h3>
                         <a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
@@ -458,8 +476,7 @@
                 <!-- PROJECT 4: CNN LSTM -->
                 <div style="background: #111; padding: 20px; border: 1px solid #333;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-                        <h3><a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">CNN-LSTM CLASSIFIER</a></h3>
-                         <!-- APPLIED FIX: Using .link-accent -->
+                        <h3><a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank">CNN-LSTM CLASSIFIER</a></h3>
                         <a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
@@ -475,8 +492,7 @@
                 <!-- PROJECT 5: COMPRESSION -->
                 <div style="background: #111; padding: 20px; border: 1px solid #333;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-                        <h3><a href="https://github.com/questinrest/image-video-compression" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">MEDIA COMPRESSION</a></h3>
-                         <!-- APPLIED FIX: Using .link-accent -->
+                        <h3><a href="https://github.com/questinrest/image-video-compression" target="_blank">MEDIA COMPRESSION</a></h3>
                         <a href="https://github.com/questinrest/image-video-compression" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
@@ -492,7 +508,7 @@
                 <!-- PROJECT 6 (Placeholder) -->
                 <div style="background: #111; padding: 20px; border: 1px solid #333; opacity: 0.6;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-                        <h3><a href="https://github.com/questinrest" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">OBSERVABILITY_STACK</a></h3>
+                        <h3><a href="https://github.com/questinrest" target="_blank">OBSERVABILITY_STACK</a></h3>
                         <span style="color: var(--alert); font-size: 0.7rem;">[PENDING]</span>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
@@ -511,7 +527,7 @@
     <!-- FOOTER -->
     <footer class="col-span-12" style="text-align: center; padding-top: 40px; color: #666; font-size: 0.75rem;">
         <p>
-            SYSTEM_EOF //🛡️<br>
+            SYSTEM_EOF // 🛡️<br>
             <span class="glitch-text">WAITING_FOR_INPUT</span>
         </p>
     </footer>
