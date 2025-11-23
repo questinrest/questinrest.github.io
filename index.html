@@ -6,11 +6,11 @@
     <title>Aman's Portfolio</title>
     <style>
         :root {
-            --bg: #080808; /* Slightly lighter black for reduced contrast strain */
+            --bg: #080808;
             --surface: #111;
             --text-primary: #F0F0F0;
             --text-dim: #999;
-            --accent: #CCFF00; /* Acid Green */
+            --accent: #CCFF00;
             --accent-dim: rgba(204, 255, 0, 0.1);
             --alert: #FF003C;
             --grid-line: #222;
@@ -28,7 +28,7 @@
             color: var(--text-primary);
             font-family: var(--font-mono);
             font-size: 14px;
-            line-height: 1.6; /* Increased line height for readability */
+            line-height: 1.6;
             overflow-x: hidden;
             background-image: 
                 linear-gradient(var(--grid-line) 1px, transparent 1px),
@@ -36,7 +36,6 @@
             background-size: 40px 40px;
         }
 
-        /* CRT SCANLINE EFFECT - REDUCED INTENSITY */
         body::before {
             content: " ";
             display: block;
@@ -45,7 +44,7 @@
             left: 0;
             bottom: 0;
             right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%); /* Reduced opacity */
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%);
             background-size: 100% 3px;
             z-index: 999;
             pointer-events: none;
@@ -63,8 +62,19 @@
             color: #000;
             box-shadow: 0 0 10px var(--accent);
         }
+        
+        /* FIX: Class for accent-colored links to ensure visibility on hover */
+        .link-accent {
+            color: var(--accent);
+            transition: all 0.2s ease;
+        }
+        
+        .link-accent:hover {
+            color: #000 !important; /* Forces black text on hover */
+            background-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+        }
 
-        /* LAYOUT UTILS */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -83,10 +93,9 @@
             .col-span-8, .col-span-4, .col-span-6 { grid-column: span 12; }
         }
 
-        /* COMPONENTS */
         .panel {
             border: 1px solid #333;
-            background: rgba(10, 10, 10, 0.95); /* Slight transparency */
+            background: rgba(10, 10, 10, 0.95);
             padding: 25px;
             position: relative;
             box-shadow: 4px 4px 0px #1a1a1a;
@@ -147,7 +156,6 @@
             background: #1a1a1a;
         }
 
-        /* HERO BLOCK */
         .hero-status {
             display: flex;
             flex-wrap: wrap;
@@ -171,7 +179,6 @@
             box-shadow: 0 0 5px var(--accent);
         }
 
-        /* EXPERIENCE LIST */
         .exp-item {
             position: relative;
             padding-left: 25px;
@@ -197,7 +204,6 @@
             font-weight: bold;
         }
 
-        /* NEWSLETTER BOX */
         .newsletter-box {
             border: 1px solid var(--accent);
             background: var(--accent-dim);
@@ -221,8 +227,8 @@
         .ascii-art {
             font-size: 12px;
             line-height: 12px;
-            color: var(--accent); /* High visibility acid green */
-            text-shadow: 0 0 10px rgba(204, 255, 0, 0.4); /* Glow effect */
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(204, 255, 0, 0.4);
             white-space: pre;
             overflow: hidden;
             margin-bottom: 25px;
@@ -230,7 +236,6 @@
             font-weight: bold;
         }
         
-        /* Typography adjustments for readability */
         p {
             color: #ccc;
         }
@@ -238,7 +243,6 @@
         .panel p {
             max-width: 95%;
         }
-
     </style>
 </head>
 <body>
@@ -249,7 +253,7 @@
     <header class="col-span-12">
         <div class="hero-status">
             <span><span class="status-dot"></span>SYSTEM_ONLINE</span>
-            <span>LOC: New Delhi/India</span>
+            <span>LOC: NEW DELHI/INDIA</span>
             <span>ROLE: AI_ENGINEER</span>
             <span style="display: flex; align-items: center; gap: 5px;">
                 NET_PACKETS: 
@@ -290,7 +294,7 @@
             <div class="exp-item">
                 <span class="date">AUG 2025 - PRESENT // DELAWARE (REMOTE)</span>
                 <h2>OBSERVO TECH STUDIO</h2>
-                <p style="color: #aaa; margin-bottom: 8px;">Founding Team (Engineering)</p>
+                <p style="color: #aaa; margin-bottom: 8px;">Founding Team Intern (Engineering)</p>
                 <p>
                     > Architected backend microservices using <span style="color:white">FastAPI</span> & JWT auth.<br>
                     > Engineered serverless workflows via <span style="color:white">Azure Function Apps</span> & Logic Apps.<br>
@@ -333,7 +337,7 @@
             </div>
             <h3>LINKEDIN NEWSLETTER</h3>
             <p style="font-size: 0.9rem; margin-bottom: 15px; color: #ddd;">
-                Clear and practical takes.
+                Clear and practical takes. No hype. Just engineering reality.
             </p>
             <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7365791507200577536" style="width: 100%; display: block; text-align: center; background: var(--bg); color: var(--accent); border: 1px solid var(--accent); padding: 8px; font-weight: bold;">ESTABLISH_LINK</a>
         </div>
@@ -396,7 +400,8 @@
         <div class="panel">
             <div class="panel-header">
                 <span>/// COMPILED_ARTIFACTS (PROJECTS)</span>
-                <a href="https://github.com/questinrest?tab=repositories" target="_blank" style="color: var(--accent); border-bottom: 1px dashed var(--accent);">[VIEW_FULL_ARCHIVE] -></a>
+                <!-- APPLIED FIX: Using .link-accent class instead of inline styles -->
+                <a href="https://github.com/questinrest?tab=repositories" target="_blank" class="link-accent" style="border-bottom: 1px dashed var(--accent);">[VIEW_FULL_ARCHIVE] -></a>
             </div>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
@@ -437,7 +442,8 @@
                 <div style="background: #111; padding: 20px; border: 1px solid #333;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
                         <h3><a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">DEEP ML SOLUTIONS</a></h3>
-                        <span style="color: var(--accent); font-size: 0.7rem;">[SOURCE]</span>
+                        <!-- APPLIED FIX: Using .link-accent -->
+                        <a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
                         Comprehensive implementation of foundational ML algorithms and deep learning architectures.
@@ -453,7 +459,8 @@
                 <div style="background: #111; padding: 20px; border: 1px solid #333;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
                         <h3><a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">CNN-LSTM CLASSIFIER</a></h3>
-                        <span style="color: var(--accent); font-size: 0.7rem;">[SOURCE]</span>
+                         <!-- APPLIED FIX: Using .link-accent -->
+                        <a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
                         Hybrid architecture combining spatial feature extraction (CNN) with temporal sequence modeling (LSTM) for video frame classification.
@@ -469,7 +476,8 @@
                 <div style="background: #111; padding: 20px; border: 1px solid #333;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
                         <h3><a href="https://github.com/questinrest/image-video-compression" target="_blank" style="color: inherit; border-bottom: 1px solid var(--accent);">MEDIA COMPRESSION</a></h3>
-                        <span style="color: var(--accent); font-size: 0.7rem;">[SOURCE]</span>
+                         <!-- APPLIED FIX: Using .link-accent -->
+                        <a href="https://github.com/questinrest/image-video-compression" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
                     </div>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
                         Algorithmic implementations for efficient image and video compression standards and optimization techniques.
@@ -503,7 +511,7 @@
     <!-- FOOTER -->
     <footer class="col-span-12" style="text-align: center; padding-top: 40px; color: #666; font-size: 0.75rem;">
         <p>
-            SYSTEM_EOF //❤️<br>
+            SYSTEM_EOF //🛡️<br>
             <span class="glitch-text">WAITING_FOR_INPUT</span>
         </p>
     </footer>
@@ -512,4 +520,3 @@
 
 </body>
 </html>
-
