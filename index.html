@@ -1,223 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aman Mishra — AI / ML Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman's Portfolio 2025 December</title>
+    <style>
+        :root {
+            --bg: #080808;
+            --surface: #111;
+            --text-primary: #F0F0F0;
+            --text-dim: #999;
+            --accent: #CCFF00;
+            --accent-dim: rgba(204, 255, 0, 0.1);
+            --alert: #FF003C;
+            --grid-line: #222;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
 
-<style>
-:root {
-    --bg:#080808; --surface:#111; --text:#f0f0f0; --dim:#999;
-    --accent:#ccff00; --accent-dim:rgba(204,255,0,.12);
-    --alert:#ff003c; --grid:#222;
-    --mono:'Courier New',monospace;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-    background:var(--bg);color:var(--text);font-family:var(--mono);
-    font-size:14px;line-height:1.6;
-    background-image:
-      linear-gradient(var(--grid) 1px,transparent 1px),
-      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-    background-size:40px 40px;
-}
-a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--accent)}
-a:hover{background:var(--accent);color:#000}
-.container{
-    max-width:1200px;margin:auto;padding:40px 20px;
-    display:grid;grid-template-columns:repeat(12,1fr);gap:20px;
-}
-.col-12{grid-column:span 12}
-.col-8{grid-column:span 8}
-.col-4{grid-column:span 4}
-@media(max-width:900px){.col-8,.col-4{grid-column:span 12}}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.panel{
-    background:rgba(10,10,10,.95);
-    border:1px solid #333;
-    padding:25px;
-    box-shadow:4px 4px 0 #1a1a1a;
-}
-.panel:hover{border-color:var(--accent)}
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
 
-.panel-header{
-    display:flex;justify-content:space-between;
-    font-size:.75rem;letter-spacing:1px;
-    border-bottom:1px solid #333;
-    margin-bottom:20px;padding-bottom:10px;color:var(--dim)
-}
-.panel-header strong{color:var(--accent)}
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%);
+            background-size: 100% 3px;
+            z-index: 999;
+            pointer-events: none;
+        }
 
-h1{font-size:3rem;letter-spacing:-2px}
-h2{font-size:1.2rem;color:var(--accent)}
-h3{font-size:1rem;margin-bottom:5px}
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            transition: all 0.2s ease;
+        }
 
-.tag{
-    display:inline-block;border:1px solid #444;
-    padding:4px 8px;margin:4px 6px 0 0;
-    font-size:.7rem;background:#1a1a1a
-}
+        a:hover {
+            background-color: var(--accent);
+            color: #000 !important; /* Enforce black text on hover globally */
+            box-shadow: 0 0 10px var(--accent);
+        }
+        
+        /* FIX: Class for accent-colored links to ensure visibility on hover */
+        .link-accent {
+            color: var(--accent);
+            transition: all 0.2s ease;
+        }
+        
+        .link-accent:hover {
+            color: #000 !important;
+            background-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+        }
 
-/* TOOLTIP (ADDED) */
-.tooltip{position:relative;cursor:help;color:var(--accent);font-size:.75rem}
-.tooltip span{
-    visibility:hidden;position:absolute;z-index:10;
-    background:#111;color:#ccc;border:1px solid #333;
-    padding:10px;border-radius:6px;width:260px;
-    top:-10px;left:50%;transform:translate(-50%,-100%);
-    font-size:.75rem;line-height:1.4
-}
-.tooltip:hover span{visibility:visible}
+        /* FIX: Dedicated button class for newsletter to fix readability */
+        .newsletter-btn {
+            width: 100%; 
+            display: block; 
+            text-align: center; 
+            background: var(--bg); 
+            color: var(--accent); 
+            border: 1px solid var(--accent); 
+            padding: 8px; 
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
 
-/* STATUS */
-.status{font-size:.7rem}
-.active{color:var(--accent)}
-.progress{color:#ffa500}
-.research{color:#aaa}
+        .newsletter-btn:hover {
+            background-color: var(--accent);
+            color: #000 !important; /* Force black text on hover */
+            box-shadow: 0 0 15px var(--accent);
+            cursor: pointer;
+        }
 
-/* EXPERIENCE DETAILS (ADDED) */
-details summary{
-    cursor:pointer;color:var(--accent);
-    font-size:.75rem;margin-top:8px
-}
-details p{margin-top:8px;color:#ccc}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+        }
 
-/* PROJECT GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.card{background:#111;border:1px solid #333;padding:20px}
-.card.highlight{
-    border-color:var(--accent);
-    box-shadow:0 0 15px rgba(204,255,0,.15)
-}
-</style>
+        .col-span-12 { grid-column: span 12; }
+        .col-span-8 { grid-column: span 8; }
+        .col-span-4 { grid-column: span 4; }
+        .col-span-6 { grid-column: span 6; }
+
+        @media (max-width: 900px) {
+            .col-span-8, .col-span-4, .col-span-6 { grid-column: span 12; }
+        }
+
+        .panel {
+            border: 1px solid #333;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 25px;
+            position: relative;
+            box-shadow: 4px 4px 0px #1a1a1a;
+        }
+
+        .panel:hover {
+            border-color: var(--accent);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            color: var(--text-dim);
+        }
+
+        .panel-header strong {
+            color: var(--accent);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 2px 2px 0px #222;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            border: 1px solid #444;
+            padding: 4px 8px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            color: #ddd;
+            background: #1a1a1a;
+        }
+
+        .hero-status {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            padding: 10px;
+            background: #111;
+            align-items: center;
+        }
+        
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            box-shadow: 0 0 5px var(--accent);
+        }
+
+        .exp-item {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 35px;
+            border-left: 1px solid #333;
+        }
+
+        .exp-item::before {
+            content: "";
+            position: absolute;
+            left: -3px;
+            top: 0;
+            width: 5px;
+            height: 5px;
+            background: var(--accent);
+        }
+
+        .date {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .newsletter-box {
+            border: 1px solid var(--accent);
+            background: var(--accent-dim);
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .glitch-text {
+            position: relative;
+        }
+
+        .glitch-text::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .ascii-art {
+            font-size: 12px;
+            line-height: 12px;
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(204, 255, 0, 0.4);
+            white-space: pre;
+            overflow: hidden;
+            margin-bottom: 25px;
+            user-select: none;
+            font-weight: bold;
+        }
+        
+        p {
+            color: #ccc;
+        }
+        
+        .panel p {
+            max-width: 95%;
+        }
+    </style>
 </head>
-
 <body>
+
 <div class="container">
 
-<!-- HEADER (INTACT + RESUME ADDED) -->
-<div class="col-12 panel" style="border-top:4px solid var(--accent)">
-<h1>AMAN MISHRA</h1>
-<p style="margin:15px 0;color:#fff">
-&gt; BUILDING AGENTIC SYSTEMS<br>
-&gt; ML + GENAI + SYSTEMS ENGINEERING<br>
-&gt; EX-CONFEDO AI | USG LAB IIITD
-</p>
-<div style="display:flex;gap:15px;flex-wrap:wrap">
-<a href="https://www.linkedin.com/in/aman---mishra/">LINKEDIN</a>
-<a href="https://github.com/questinrest">GITHUB</a>
-<a href="https://your-newsletter-link.com">INSIGHTS</a>
-<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank">RESUME</a>
-<a href="mailto:am30435@gmail.com">CONTACT</a>
-</div>
+    <!-- HEADER / IDENTITY -->
+    <header class="col-span-12">
+        <div class="hero-status">
+            <span><span class="status-dot"></span>SYSTEM_ONLINE</span>
+            <span>LOC: NEW DELHI/INDIA</span>
+            <span>ROLE: AI_ENGINEER</span>
+            <span style="display: flex; align-items: center; gap: 5px;">
+                NET_PACKETS: 
+                <img src="https://komarev.com/ghpvc/?username=questinrest&label=&color=111111&style=flat-square&label_color=111111" alt="traffic_count" style="height: 16px; opacity: 0.7;">
+            </span>
+            <span style="color: var(--alert)">WARN: HIGH_LATENCY_LEGACY_SYSTEMS</span>
+        </div>
+        
+        <div class="panel" style="border-top: 4px solid var(--accent);">
+            <div class="ascii-art">
+   __ _ _ __ ___   __ _ _ __  
+  / _` | '_ ` _ \ / _` | '_ \ 
+ | (_| | | | | | | (_| | | | |
+  \__,_|_| |_| |_|\__,_|_| |_|  MISHRA.sys
+            </div>
+            <h1>AMAN MISHRA</h1>
+            <p style="max-width: 600px; margin-bottom: 20px; font-size: 1.1rem; color: #fff;">
+                > BUILDING AGENTIC SYSTEMS @ OBSERVO TECH STUDIO<br>
+                > MATH + CODE // ENGINEERING FIRST<br>
+                > EX-CONFEDO AI | EX-USG LAB IIITD
+            </p>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://www.linkedin.com/in/aman---mishra/">LINKEDIN</a>
+                <a href="https://github.com/questinrest">GITHUB</a>
+                <a href="mailto:am30435@gmail.com">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- LEFT COLUMN: WORK HISTORY -->
+    <div class="col-span-8">
+        <div class="panel" style="height: 100%;">
+            <div class="panel-header">
+                <span>/// EXECUTION_LOG: EXPERIENCE</span>
+                <strong>[RWX]</strong>
+            </div>
+
+            <div class="exp-item">
+                <span class="date">AUG 2025 - PRESENT // DELAWARE (REMOTE)</span>
+                <h2>OBSERVO TECH STUDIO</h2>
+                <p style="color: #aaa; margin-bottom: 8px;">Founding Team (Engineering)</p>
+                <p>
+                    > Architected backend microservices using <span style="color:white">FastAPI</span> & JWT auth.<br>
+                    > Engineered serverless workflows via <span style="color:white">Azure Function Apps</span> & Logic Apps.<br>
+                    > Integrated Azure Blob Storage/Key Vault for secure, scalable data I/O.
+                </p>
+            </div>
+
+            <div class="exp-item">
+                <span class="date">APR 2025 - JUL 2025 // PUNE (REMOTE)</span>
+                <h2>CONFEDO AI</h2>
+                <p style="color: #aaa; margin-bottom: 8px;">GenAI Intern (R&D)</p>
+                <p>
+                    > Analyzed LLM observability stacks: LangSmith, RAGAS, DeepEval.<br>
+                    > Built agentic prototypes using <span style="color:white">LangGraph & n8n</span>.<br>
+                    > Defined architecture for reliable production AI service operationalization.
+                </p>
+            </div>
+
+            <div class="exp-item">
+                <span class="date">JAN 2025 - JUN 2025 // NEW DELHI</span>
+                <h2>USG LAB @ IIIT DELHI</h2>
+                <p style="color: #aaa; margin-bottom: 8px;">Research Intern (Master's Thesis)</p>
+                <p>
+                    > Executed <strong>Machine Unlearning</strong> via contrastive model inversion.<br>
+                    > Achieved 90%+ efficacy across 8 classes; reduced retraining time by ~77%.<br>
+                    > Investigated coreset strategies and outlier detection for vision tasks.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN: STATS & SKILLS -->
+    <div class="col-span-4">
+        
+        <!-- WRITING MODULE -->
+        <div class="panel newsletter-box">
+            <div class="panel-header" style="border-color: var(--accent); color: var(--accent);">
+                <span>/// DATA_STREAM: INSIGHT</span>
+                <strong>[LIVE]</strong>
+            </div>
+            <h3>LINKEDIN NEWSLETTER</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 15px; color: #ddd;">
+                Clear and practical takes. No hype. Just engineering reality.
+            </p>
+            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7365791507200577536" class="newsletter-btn">ESTABLISH_LINK</a>
+        </div>
+
+        <!-- SKILLS MODULE -->
+        <div class="panel" style="margin-top: 20px;">
+            <div class="panel-header">
+                <span>/// INSTALLED_MODULES</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <h3>LANGUAGES</h3>
+                <div>
+                    <span class="tag">PYTHON</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">R</span>
+                </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <h3>STACK</h3>
+                <div>
+                    <span class="tag">PYTORCH</span>
+                    <span class="tag">FASTAPI</span>
+                    <span class="tag">DOCKER</span>
+                    <span class="tag">AZURE</span>
+                    <span class="tag">LANGCHAIN</span>
+                    <span class="tag">HUGGING_FACE</span>
+                </div>
+            </div>
+            <div>
+                <h3>DB</h3>
+                <div>
+                    <span class="tag">MONGODB</span>
+                    <span class="tag">CHROMA</span>
+                    <span class="tag">POSTGRES</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION MODULE -->
+        <div class="panel" style="margin-top: 20px;">
+            <div class="panel-header">
+                <span>/// ACADEMIC_KERNELS</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="date">2023 - 2025</span>
+                <h3 style="margin-bottom: 0;">MSc DATA SCIENCE</h3>
+                <span style="font-size: 0.8rem; color: #aaa;">DIAT, Pune</span>
+            </div>
+            <div>
+                <span class="date">2018 - 2021</span>
+                <h3 style="margin-bottom: 0;">BSc MATHEMATICS</h3>
+                <span style="font-size: 0.8rem; color: #aaa;">IGNOU</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FULL WIDTH PROJECTS -->
+    <div class="col-span-12">
+        <div class="panel">
+            <div class="panel-header">
+                <span>/// COMPILED_ARTIFACTS (PROJECTS)</span>
+                <a href="https://github.com/questinrest?tab=repositories" target="_blank" class="link-accent" style="border-bottom: 1px dashed var(--accent);">[VIEW_FULL_ARCHIVE] -></a>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                
+                <!-- PROJECT 1 -->
+                <div style="background: #111; padding: 20px; border: 1px solid #333;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3><a href="https://github.com/questinrest" target="_blank">LLMOps PIPELINE</a></h3>
+                        <span style="color: var(--accent); font-size: 0.7rem;">v1.0.0</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
+                        Automated CI/CD for LLM APIs using GitHub Actions. Handles testing, evaluation, deployment, and rollback mechanisms.
+                    </p>
+                    <div>
+                        <span class="tag">GITHUB ACTIONS</span>
+                        <span class="tag">DOCKER</span>
+                        <span class="tag">FASTAPI</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div style="background: #111; padding: 20px; border: 1px solid #333;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3><a href="https://github.com/questinrest" target="_blank">VOICE AGENT + TOOLS</a></h3>
+                        <span style="color: var(--accent); font-size: 0.7rem;">v0.9.beta</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
+                        Real-time voice agent triggering tool-based actions (flight search/booking). Multi-modal integration with LoRA adapters.
+                    </p>
+                    <div>
+                        <span class="tag">LoRA</span>
+                        <span class="tag">LANGCHAIN</span>
+                        <span class="tag">PEFT</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: DEEP ML SOLUTIONS -->
+                <div style="background: #111; padding: 20px; border: 1px solid #333;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3><a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank">DEEP ML SOLUTIONS</a></h3>
+                        <a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
+                        Comprehensive implementation of foundational ML algorithms and deep learning architectures.
+                    </p>
+                    <div>
+                        <span class="tag">DEEP LEARNING</span>
+                        <span class="tag">MATH</span>
+                        <span class="tag">ALGORITHMS</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4: CNN LSTM -->
+                <div style="background: #111; padding: 20px; border: 1px solid #333;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3><a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank">CNN-LSTM CLASSIFIER</a></h3>
+                        <a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
+                        Hybrid architecture combining spatial feature extraction (CNN) with temporal sequence modeling (LSTM) for video frame classification.
+                    </p>
+                    <div>
+                        <span class="tag">COMPUTER VISION</span>
+                        <span class="tag">PYTORCH</span>
+                        <span class="tag">TIME-SERIES</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5: COMPRESSION -->
+                <div style="background: #111; padding: 20px; border: 1px solid #333;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3><a href="https://github.com/questinrest/image-video-compression" target="_blank">MEDIA COMPRESSION</a></h3>
+                        <a href="https://github.com/questinrest/image-video-compression" target="_blank" class="link-accent" style="font-size: 0.7rem;">[SOURCE]</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
+                        Algorithmic implementations for efficient image and video compression standards and optimization techniques.
+                    </p>
+                    <div>
+                        <span class="tag">COMPRESSION</span>
+                        <span class="tag">OPTIMIZATION</span>
+                        <span class="tag">MEDIA</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6 (Placeholder) -->
+                <div style="background: #111; padding: 20px; border: 1px solid #333; opacity: 0.6;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h3><a href="https://github.com/questinrest" target="_blank">OBSERVABILITY_STACK</a></h3>
+                        <span style="color: var(--alert); font-size: 0.7rem;">[PENDING]</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">
+                        Research into RAGAS and DeepEval for automated metric tracking in production environments.
+                    </p>
+                    <div>
+                        <span class="tag">RAGAS</span>
+                        <span class="tag">DEEPEVAL</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="col-span-12" style="text-align: center; padding-top: 40px; color: #666; font-size: 0.75rem;">
+        <p>
+            SYSTEM_EOF // 🛡️<br>
+            <span class="glitch-text">WAITING_FOR_INPUT</span>
+        </p>
+    </footer>
+
 </div>
 
-<!-- EXPERIENCE (DETAIL VIEW ADDED, CONTENT SAME) -->
-<div class="col-8 panel">
-<div class="panel-header"><span>EXECUTION_LOG: EXPERIENCE</span><strong>[RWX]</strong></div>
-
-<div class="exp">
-<h2>OBSERVO TECH STUDIO</h2>
-<p>Founding Team – GenAI / Agentic Systems</p>
-<p>
-&gt; FastAPI backend, JWT auth<br>
-&gt; Azure Functions & Logic Apps<br>
-&gt; LLM-powered automation
-</p>
-<details>
-<summary>[+] VIEW DETAILS</summary>
-<p>
-• Event-driven orchestration for agents<br>
-• Secure API integrations & retries<br>
-• Designed for tool-calling workflows
-</p>
-</details>
-</div>
-
-<div class="exp">
-<h2>CONFEDO AI</h2>
-<p>GenAI Engineer Intern (R&D)</p>
-<p>
-&gt; Evaluated LangSmith, RAGAS, DeepEval<br>
-&gt; Built LangChain + LangGraph prototypes
-</p>
-<details>
-<summary>[+] VIEW DETAILS</summary>
-<p>
-• Agent tracing & evaluation trade-offs<br>
-• Reliability analysis for GenAI systems
-</p>
-</details>
-</div>
-
-<div class="exp">
-<h2>USG LAB @ IIIT DELHI</h2>
-<p>Research Intern – Machine Unlearning</p>
-<p>
-&gt; Zero-shot unlearning via inversion<br>
-&gt; 90%+ forgetting, 77% retraining reduction
-</p>
-</div>
-</div>
-
-<!-- PROJECTS (ORDERED + TOOLTIP ADDED) -->
-<div class="col-12 panel">
-<div class="panel-header">
-<span>COMPILED_ARTIFACTS</span>
-<a href="https://github.com/questinrest">[ALL]</a>
-</div>
-
-<div class="grid">
-
-<div class="card highlight">
-<h3>
-<a href="https://github.com/questinrest/torch-unlearn">TORCH-UNLEARN</a>
-<span class="tooltip">ⓘ
-<span>
-Unlearning research lacks reusable tooling.
-This project exists to standardize evaluation and benchmarking.
-</span>
-</span>
-</h3>
-<span class="status active">ACTIVE</span>
-<p>Modular PyTorch framework for machine unlearning research.</p>
-</div>
-
-<div class="card">
-<h3>
-RAG DOMAIN QA
-<span class="tooltip">ⓘ
-<span>
-LLMs hallucinate without grounding.
-This explores retrieval + chunking strategies.
-</span>
-</span>
-</h3>
-<span class="status progress">IN PROGRESS</span>
-<p>RAG pipeline with dense retrieval and evaluation.</p>
-</div>
-
-<div class="card">
-<h3>
-GENAI OBSERVABILITY
-<span class="tooltip">ⓘ
-<span>
-GenAI systems fail silently.
-This explores tracing, eval, and reliability monitoring.
-</span>
-</span>
-</h3>
-<span class="status research">RESEARCH</span>
-<p>Evaluation & observability using RAGAS / DeepEval.</p>
-</div>
-
-</div>
-</div>
-
-<footer class="col-12" style="text-align:center;color:#666;font-size:.75rem;padding-top:40px">
-SYSTEM_EOF // WAITING_FOR_INPUT
-</footer>
-
-</div>
 </body>
 </html>
+
+
+
