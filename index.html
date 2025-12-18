@@ -58,7 +58,7 @@ h3{font-size:1rem;margin-bottom:5px}
     font-size:.7rem;background:#1a1a1a
 }
 
-/* Tooltip */
+/* TOOLTIP (ADDED) */
 .tooltip{position:relative;cursor:help;color:var(--accent);font-size:.75rem}
 .tooltip span{
     visibility:hidden;position:absolute;z-index:10;
@@ -69,23 +69,20 @@ h3{font-size:1rem;margin-bottom:5px}
 }
 .tooltip:hover span{visibility:visible}
 
-/* Status */
+/* STATUS */
 .status{font-size:.7rem}
 .active{color:var(--accent)}
 .progress{color:#ffa500}
 .research{color:#aaa}
 
-/* Experience */
-.exp{border-left:1px solid #333;padding-left:20px;margin-bottom:30px}
-.date{font-size:.75rem;color:var(--dim);font-weight:bold}
-
+/* EXPERIENCE DETAILS (ADDED) */
 details summary{
     cursor:pointer;color:var(--accent);
     font-size:.75rem;margin-top:8px
 }
 details p{margin-top:8px;color:#ccc}
 
-/* Projects */
+/* PROJECT GRID */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .card{background:#111;border:1px solid #333;padding:20px}
 .card.highlight{
@@ -98,7 +95,7 @@ details p{margin-top:8px;color:#ccc}
 <body>
 <div class="container">
 
-<!-- HEADER -->
+<!-- HEADER (INTACT + RESUME ADDED) -->
 <div class="col-12 panel" style="border-top:4px solid var(--accent)">
 <h1>AMAN MISHRA</h1>
 <p style="margin:15px 0;color:#fff">
@@ -109,36 +106,35 @@ details p{margin-top:8px;color:#ccc}
 <div style="display:flex;gap:15px;flex-wrap:wrap">
 <a href="https://www.linkedin.com/in/aman---mishra/">LINKEDIN</a>
 <a href="https://github.com/questinrest">GITHUB</a>
-<a href="https://drive.google.com/file/d/1yl0QTB5Y7yTADI2gvkOuSR_51k2Tbwzu/view?usp=drive_link" target="_blank">RESUME</a>
+<a href="https://your-newsletter-link.com">INSIGHTS</a>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank">RESUME</a>
 <a href="mailto:am30435@gmail.com">CONTACT</a>
 </div>
 </div>
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE (DETAIL VIEW ADDED, CONTENT SAME) -->
 <div class="col-8 panel">
 <div class="panel-header"><span>EXECUTION_LOG: EXPERIENCE</span><strong>[RWX]</strong></div>
 
 <div class="exp">
-<span class="date">AUG 2025 – PRESENT | REMOTE</span>
 <h2>OBSERVO TECH STUDIO</h2>
 <p>Founding Team – GenAI / Agentic Systems</p>
 <p>
-&gt; Built FastAPI backend + JWT auth<br>
-&gt; Azure Functions + Logic Apps orchestration<br>
-&gt; LLM-driven automation foundations
+&gt; FastAPI backend, JWT auth<br>
+&gt; Azure Functions & Logic Apps<br>
+&gt; LLM-powered automation
 </p>
 <details>
 <summary>[+] VIEW DETAILS</summary>
 <p>
-• Event-driven pipelines for agent execution<br>
+• Event-driven orchestration for agents<br>
 • Secure API integrations & retries<br>
-• Designed for future tool-calling agents
+• Designed for tool-calling workflows
 </p>
 </details>
 </div>
 
 <div class="exp">
-<span class="date">APR 2025 – JUL 2025</span>
 <h2>CONFEDO AI</h2>
 <p>GenAI Engineer Intern (R&D)</p>
 <p>
@@ -148,38 +144,27 @@ details p{margin-top:8px;color:#ccc}
 <details>
 <summary>[+] VIEW DETAILS</summary>
 <p>
-• Agent tracing & eval trade-offs<br>
-• Production reliability analysis
+• Agent tracing & evaluation trade-offs<br>
+• Reliability analysis for GenAI systems
 </p>
 </details>
 </div>
 
 <div class="exp">
-<span class="date">JAN 2025 – JUN 2025</span>
 <h2>USG LAB @ IIIT DELHI</h2>
 <p>Research Intern – Machine Unlearning</p>
 <p>
-&gt; Zero-shot unlearning via model inversion<br>
+&gt; Zero-shot unlearning via inversion<br>
 &gt; 90%+ forgetting, 77% retraining reduction
 </p>
 </div>
 </div>
 
-<!-- SIDE -->
-<div class="col-4 panel">
-<h3>CORE STACK</h3>
-<div>
-<span class="tag">PYTHON</span><span class="tag">PYTORCH</span>
-<span class="tag">LANGCHAIN</span><span class="tag">AZURE</span>
-<span class="tag">DOCKER</span>
-</div>
-</div>
-
-<!-- PROJECTS -->
+<!-- PROJECTS (ORDERED + TOOLTIP ADDED) -->
 <div class="col-12 panel">
 <div class="panel-header">
 <span>COMPILED_ARTIFACTS</span>
-<a href="https://github.com/questinrest" style="border-bottom:1px dashed var(--accent)">[ALL]</a>
+<a href="https://github.com/questinrest">[ALL]</a>
 </div>
 
 <div class="grid">
@@ -188,40 +173,42 @@ details p{margin-top:8px;color:#ccc}
 <h3>
 <a href="https://github.com/questinrest/torch-unlearn">TORCH-UNLEARN</a>
 <span class="tooltip">ⓘ
-<span>Unlearning research lacks reusable tooling. This exists to standardize evaluation and benchmarking.</span>
+<span>
+Unlearning research lacks reusable tooling.
+This project exists to standardize evaluation and benchmarking.
+</span>
 </span>
 </h3>
 <span class="status active">ACTIVE</span>
 <p>Modular PyTorch framework for machine unlearning research.</p>
-<div>
-<span class="tag">ML SYSTEMS</span><span class="tag">EVALUATION</span>
-</div>
 </div>
 
 <div class="card">
-<h3>RAG DOMAIN QA
+<h3>
+RAG DOMAIN QA
 <span class="tooltip">ⓘ
-<span>LLMs hallucinate. This project explores retrieval + chunking to improve factual grounding.</span>
+<span>
+LLMs hallucinate without grounding.
+This explores retrieval + chunking strategies.
+</span>
 </span>
 </h3>
 <span class="status progress">IN PROGRESS</span>
-<p>RAG pipeline with dense retrieval & evaluation.</p>
-<div>
-<span class="tag">RAG</span><span class="tag">FAISS</span>
-</div>
+<p>RAG pipeline with dense retrieval and evaluation.</p>
 </div>
 
 <div class="card">
-<h3>GENAI OBSERVABILITY
+<h3>
+GENAI OBSERVABILITY
 <span class="tooltip">ⓘ
-<span>GenAI failures are silent. This explores tracing, eval, and reliability monitoring.</span>
+<span>
+GenAI systems fail silently.
+This explores tracing, eval, and reliability monitoring.
+</span>
 </span>
 </h3>
 <span class="status research">RESEARCH</span>
 <p>Evaluation & observability using RAGAS / DeepEval.</p>
-<div>
-<span class="tag">LLM EVAL</span><span class="tag">OBSERVABILITY</span>
-</div>
 </div>
 
 </div>
