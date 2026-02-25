@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aman Mishra — AI/ML Engineer</title>
-    <meta name="description" content="AI/ML Engineer building LLM systems, RAG pipelines, and production AI infrastructure.">
+    <meta name="description"
+        content="AI/ML Engineer building LLM systems, RAG pipelines, and production AI infrastructure.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             /* Cosmic palette — inspired by GitHub Universe */
@@ -113,14 +116,33 @@
             gap: 24px;
         }
 
-        .col-12 { grid-column: span 12; }
-        .col-8 { grid-column: span 8; }
-        .col-4 { grid-column: span 4; }
-        .col-6 { grid-column: span 6; }
+        .col-12 {
+            grid-column: span 12;
+        }
+
+        .col-8 {
+            grid-column: span 8;
+        }
+
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
 
         @media (max-width: 900px) {
-            .col-8, .col-4, .col-6 { grid-column: span 12; }
-            .container { padding: 32px 16px; }
+
+            .col-8,
+            .col-4,
+            .col-6 {
+                grid-column: span 12;
+            }
+
+            .container {
+                padding: 32px 16px;
+            }
         }
 
         /* ─── GLASS PANELS ─── */
@@ -142,7 +164,7 @@
             inset: 0;
             border-radius: 16px;
             padding: 1px;
-            background: linear-gradient(135deg, rgba(79,125,245,0.1), transparent, rgba(168,85,247,0.05));
+            background: linear-gradient(135deg, rgba(79, 125, 245, 0.1), transparent, rgba(168, 85, 247, 0.05));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -178,8 +200,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
+
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
 
         /* ─── HERO ─── */
@@ -192,16 +221,18 @@
             flex-wrap: wrap;
             gap: 24px;
             font-family: var(--font-mono);
-            font-size: 0.72rem;
+            font-size: 0.75rem;
+            font-weight: 500;
             letter-spacing: 1.5px;
-            color: var(--text-dim);
+            color: var(--text-secondary);
             margin-bottom: 40px;
-            padding: 14px 20px;
-            background: rgba(15, 15, 40, 0.5);
-            border: 1px solid var(--glass-border);
+            padding: 16px 24px;
+            background: rgba(20, 20, 55, 0.7);
+            border: 1px solid rgba(79, 125, 245, 0.15);
             border-radius: 12px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(16px);
             align-items: center;
+            box-shadow: 0 2px 16px rgba(79, 125, 245, 0.06);
         }
 
         .hero-status-bar .dot {
@@ -220,7 +251,8 @@
             font-weight: 900;
             letter-spacing: -3px;
             line-height: 1;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            padding-left: 4px;
             background: linear-gradient(135deg, #ffffff 0%, #c9d1d9 40%, #a855f7 100%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -228,11 +260,12 @@
         }
 
         .hero-description {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-secondary);
-            max-width: 580px;
+            max-width: 600px;
             margin-bottom: 28px;
             line-height: 1.8;
+            padding-left: 4px;
         }
 
         .hero-description strong {
@@ -244,6 +277,7 @@
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
+            padding-left: 4px;
         }
 
         .hero-links a {
@@ -545,7 +579,9 @@
         }
 
         @keyframes blink {
-            50% { opacity: 0; }
+            50% {
+                opacity: 0;
+            }
         }
 
         /* ─── ACCENT DIVIDER ─── */
@@ -617,14 +653,15 @@
             <div class="panel hero" style="border: none; background: transparent; backdrop-filter: none; padding: 0;">
                 <h1>AMAN<br>MISHRA</h1>
                 <p class="hero-description">
-                    <strong>Building agentic systems</strong>.
-                    Hands-on with LLM systems, RAG pipelines, and production AI infrastructure.
-                    Strong foundation in ML, DL, and GenAI — engineering first, always.
+                    <strong>Building agentic systems</strong> at Observo Tech Studio. Hands-on with LLM systems, RAG
+                    pipelines, and production AI infrastructure. Strong foundation in ML, DL, and GenAI — engineering
+                    first, always.
                 </p>
                 <div class="hero-links">
                     <a href="https://www.linkedin.com/in/aman---mishra/">LINKEDIN</a>
                     <a href="https://github.com/questinrest">GITHUB</a>
-                    <a href="https://questinrest.github.io">PORTFOLIO</a>
+                    <a href="https://drive.google.com/file/d/1Cs-GGi9IIdfoSfOR3Fn5ZGrDzTrvmRC7/view?usp=drive_link"
+                        target="_blank" id="resume-link">RESUME</a>
                     <a href="mailto:am30435@gmail.com">CONTACT</a>
                 </div>
             </div>
@@ -645,10 +682,13 @@
                     <div class="exp-company">Observo Tech Studio</div>
                     <div class="exp-role">Founding Engineering Team</div>
                     <p>
-                        Built an MVP email infrastructure supporting sending, receiving, and replying across multiple mailboxes, designed as an internal tool for a larger <span>agent-based system</span>.
-                        Implemented real-time event ingestion pipelines to capture <span>16+ delivery and engagement signals</span>.
+                        Built an MVP email infrastructure supporting sending, receiving, and replying across multiple
+                        mailboxes, designed as an internal tool for a larger <span>agent-based system</span>.
+                        Implemented real-time event ingestion pipelines to capture <span>16+ delivery and engagement
+                            signals</span>.
                         Developed modular analytics for granular engagement insights.
-                        Refactored backend APIs using <span>FastAPI + JWT auth</span>, deployed on <span>Azure Functions</span> with Logic Apps orchestration.
+                        Refactored backend APIs using <span>FastAPI + JWT auth</span>, deployed on <span>Azure
+                            Functions</span> with Logic Apps orchestration.
                     </p>
                 </div>
 
@@ -657,9 +697,11 @@
                     <div class="exp-company">Confedo AI</div>
                     <div class="exp-role">GenAI Engineer, R&D</div>
                     <p>
-                        Evaluated <span>4 LLM observability frameworks</span> by implementing equivalent RAG workflows and comparing tracing quality, async context propagation, and metric reliability.
+                        Evaluated <span>4 LLM observability frameworks</span> by implementing equivalent RAG workflows
+                        and comparing tracing quality, async context propagation, and metric reliability.
                         Reverse-engineered tracing implementations across <span>3 open-source codebases</span>.
-                        Built prototypes using <span>LangChain and LangGraph</span> to test RAG evaluation metrics and execution flows.
+                        Built prototypes using <span>LangChain and LangGraph</span> to test RAG evaluation metrics and
+                        execution flows.
                     </p>
                 </div>
 
@@ -668,8 +710,10 @@
                     <div class="exp-company">USG Lab @ IIIT Delhi</div>
                     <div class="exp-role">Research Intern (Master's Thesis)</div>
                     <p>
-                        Developed a <span>zero-shot machine unlearning</span> method using contrastive model inversion, enabling privacy-preserving targeted forgetting without access to training data.
-                        Achieved <span>90%+ unlearning efficacy</span> across 8 SVHN classes with <span>77% runtime reduction</span> vs. GKT baseline.
+                        Developed a <span>zero-shot machine unlearning</span> method using contrastive model inversion,
+                        enabling privacy-preserving targeted forgetting without access to training data.
+                        Achieved <span>90%+ unlearning efficacy</span> across 8 SVHN classes with <span>77% runtime
+                            reduction</span> vs. GKT baseline.
                         Benchmarked against 4 established baselines (EMMN, zMuGAN, GKT, Retraining).
                     </p>
                 </div>
@@ -683,13 +727,15 @@
             <div class="panel newsletter-panel">
                 <div class="panel-label" style="color: var(--accent-blue);">
                     <span>NEWSLETTER</span>
-                    <span class="indicator" style="background: var(--accent-blue); box-shadow: 0 0 8px var(--accent-blue);"></span>
+                    <span class="indicator"
+                        style="background: var(--accent-blue); box-shadow: 0 0 8px var(--accent-blue);"></span>
                 </div>
                 <h3>InSight</h3>
                 <p style="font-size: 0.88rem; color: var(--text-secondary);">
                     Clear and practical takes on AI/ML engineering. No hype — just what matters.
                 </p>
-                <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7365791507200577536" class="newsletter-btn">SUBSCRIBE</a>
+                <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7365791507200577536"
+                    class="newsletter-btn">SUBSCRIBE</a>
             </div>
 
             <!-- Skills -->
@@ -778,7 +824,8 @@
             <div class="panel">
                 <div class="panel-label">
                     <span>PROJECTS</span>
-                    <a href="https://github.com/questinrest?tab=repositories" target="_blank" class="archive-link">VIEW ALL →</a>
+                    <a href="https://github.com/questinrest?tab=repositories" target="_blank" class="archive-link">VIEW
+                        ALL →</a>
                 </div>
 
                 <div class="projects-grid">
@@ -786,10 +833,13 @@
                     <!-- Project 1 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/doc-struct-rag" target="_blank">DocStructRAG</a></h3>
-                            <a href="https://github.com/questinrest/doc-struct-rag" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/doc-struct-rag" target="_blank">DocStructRAG</a>
+                            </h3>
+                            <a href="https://github.com/questinrest/doc-struct-rag" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
-                        <p>Structure-aware documentation RAG pipeline with custom ingestion, hierarchical chunking, and citation-grounded answers.</p>
+                        <p>Structure-aware documentation RAG pipeline with custom ingestion, hierarchical chunking, and
+                            citation-grounded answers.</p>
                         <div>
                             <span class="tag">RAG</span>
                             <span class="tag">NLP</span>
@@ -800,10 +850,13 @@
                     <!-- Project 2 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/precision-rag-with-deduplication" target="_blank">Precision RAG</a></h3>
-                            <a href="https://github.com/questinrest/precision-rag-with-deduplication" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/precision-rag-with-deduplication"
+                                    target="_blank">Precision RAG</a></h3>
+                            <a href="https://github.com/questinrest/precision-rag-with-deduplication" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
-                        <p>High-precision RAG with SHA-256 deduplication, namespace isolation, semantic reranking, and inline-cited answers.</p>
+                        <p>High-precision RAG with SHA-256 deduplication, namespace isolation, semantic reranking, and
+                            inline-cited answers.</p>
                         <div>
                             <span class="tag">RAG</span>
                             <span class="tag">DEDUPLICATION</span>
@@ -814,10 +867,13 @@
                     <!-- Project 3 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/offline-rag-bot" target="_blank">Offline RAG Bot</a></h3>
-                            <a href="https://github.com/questinrest/offline-rag-bot" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/offline-rag-bot" target="_blank">Offline RAG
+                                    Bot</a></h3>
+                            <a href="https://github.com/questinrest/offline-rag-bot" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
-                        <p>Fully offline RAG system using local LLMs via Ollama for privacy-preserving document Q&A with Streamlit UI.</p>
+                        <p>Fully offline RAG system using local LLMs via Ollama for privacy-preserving document Q&A with
+                            Streamlit UI.</p>
                         <div>
                             <span class="tag">LOCAL LLM</span>
                             <span class="tag">PRIVACY</span>
@@ -828,10 +884,13 @@
                     <!-- Project 4 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/yolo-detection-posture-estimation" target="_blank">YOLO Posture</a></h3>
-                            <a href="https://github.com/questinrest/yolo-detection-posture-estimation" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/yolo-detection-posture-estimation"
+                                    target="_blank">YOLO Posture</a></h3>
+                            <a href="https://github.com/questinrest/yolo-detection-posture-estimation" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
-                        <p>Modular CV pipeline leveraging YOLO detection and pose estimation with geometric posture classification.</p>
+                        <p>Modular CV pipeline leveraging YOLO detection and pose estimation with geometric posture
+                            classification.</p>
                         <div>
                             <span class="tag">COMPUTER VISION</span>
                             <span class="tag">YOLO</span>
@@ -842,10 +901,13 @@
                     <!-- Project 5 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/transformer_from_scratch" target="_blank">Transformer</a></h3>
-                            <a href="https://github.com/questinrest/transformer_from_scratch" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/transformer_from_scratch"
+                                    target="_blank">Transformer</a></h3>
+                            <a href="https://github.com/questinrest/transformer_from_scratch" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
-                        <p>Decoder-only transformer from first principles in pure PyTorch. 18.9M params with Pre-LN/RoPE ablation studies.</p>
+                        <p>Decoder-only transformer from first principles in pure PyTorch. 18.9M params with Pre-LN/RoPE
+                            ablation studies.</p>
                         <div>
                             <span class="tag">PYTORCH</span>
                             <span class="tag">TRANSFORMERS</span>
@@ -856,10 +918,13 @@
                     <!-- Project 6 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank">CNN-LSTM</a></h3>
-                            <a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/cnn-lstm-frame-classification"
+                                    target="_blank">CNN-LSTM</a></h3>
+                            <a href="https://github.com/questinrest/cnn-lstm-frame-classification" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
-                        <p>Hybrid CNN+LSTM architecture for sequential frame classification. Built for gesture recognition on video data.</p>
+                        <p>Hybrid CNN+LSTM architecture for sequential frame classification. Built for gesture
+                            recognition on video data.</p>
                         <div>
                             <span class="tag">COMPUTER VISION</span>
                             <span class="tag">TIME SERIES</span>
@@ -870,10 +935,13 @@
                     <!-- Project 7 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/ClassifyKAN-Comparing-ML-NN-and-KAN" target="_blank">ClassifyKAN</a></h3>
-                            <a href="https://github.com/questinrest/ClassifyKAN-Comparing-ML-NN-and-KAN" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/ClassifyKAN-Comparing-ML-NN-and-KAN"
+                                    target="_blank">ClassifyKAN</a></h3>
+                            <a href="https://github.com/questinrest/ClassifyKAN-Comparing-ML-NN-and-KAN" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
-                        <p>Comparative study of classical ML, neural networks, and Kolmogorov-Arnold Networks on classification tasks.</p>
+                        <p>Comparative study of classical ML, neural networks, and Kolmogorov-Arnold Networks on
+                            classification tasks.</p>
                         <div>
                             <span class="tag">KAN</span>
                             <span class="tag">NEURAL NETS</span>
@@ -884,10 +952,13 @@
                     <!-- Project 8 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank">Deep ML Solutions</a></h3>
-                            <a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank">Deep ML
+                                    Solutions</a></h3>
+                            <a href="https://github.com/questinrest/Deep-ML-Solutions" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
-                        <p>Implementation of foundational ML algorithms, linear algebra routines, and deep learning architectures from scratch.</p>
+                        <p>Implementation of foundational ML algorithms, linear algebra routines, and deep learning
+                            architectures from scratch.</p>
                         <div>
                             <span class="tag">DEEP LEARNING</span>
                             <span class="tag">MATH</span>
@@ -898,8 +969,10 @@
                     <!-- Project 9 -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3><a href="https://github.com/questinrest/image-video-compression" target="_blank">Media Compression</a></h3>
-                            <a href="https://github.com/questinrest/image-video-compression" target="_blank" class="project-link">SOURCE</a>
+                            <h3><a href="https://github.com/questinrest/image-video-compression" target="_blank">Media
+                                    Compression</a></h3>
+                            <a href="https://github.com/questinrest/image-video-compression" target="_blank"
+                                class="project-link">SOURCE</a>
                         </div>
                         <p>Image and video compression using K-Means and Fuzzy C-Means clustering techniques.</p>
                         <div>
